@@ -60,7 +60,7 @@ module AjaxPaginate
                 content_tag :span, text, :class => span_class
             else
                 # page links should preserve GET parameters, so we merge params
-                link_to_remote text, @@default_options.merge(options).merge({:url=>params.merge(param.to_sym => (page !=1 ? page : nil))})
+                link_to_remote text, @@default_options.merge(options).merge({:url=>params.merge(param.to_sym => (page>1 ? page :1))})
             end
         end
 
