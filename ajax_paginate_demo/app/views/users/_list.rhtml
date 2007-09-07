@@ -1,0 +1,7 @@
+<ul>
+    <%@users.each do |user|%>
+    <li><%=h user.name%></li>
+    <%end%>
+</ul>
+
+<%=ajax_paginate @users, :before => %(Element.show('spinner')), :success => %(Element.hide('spinner')),:confirm=>'Go?'%>
