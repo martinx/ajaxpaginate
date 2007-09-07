@@ -4,4 +4,4 @@
     <%end%>
 </ul>
 
-<%=ajax_paginate @users, :before => %(Element.show('spinner')), :success => %(Element.hide('spinner')),:confirm=>'Go?'%>
+<%=ajax_paginate @users, :before => %(Element.show('spinner')), :success => %(Element.hide('spinner'))%>
